@@ -53,7 +53,7 @@ export const App = () => {
               {isLoading && <Loader />}
               {error && (
                 <p className="notification is-warning">
-                  There are no todos matching current filter criteria
+                  Error occurred while fetching todos. Please try again later.
                 </p>
               )}
               {!error && !isLoading && <TodoList todos={filteredTodos} />}
