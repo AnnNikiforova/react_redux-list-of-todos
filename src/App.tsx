@@ -51,6 +51,11 @@ export const App = () => {
 
             <div className="block">
               {isLoading && <Loader />}
+              {error && (
+                <p className="notification is-warning">
+                  There are no todos matching current filter criteria
+                </p>
+              )}
               {!error && !isLoading && <TodoList todos={filteredTodos} />}
             </div>
           </div>
